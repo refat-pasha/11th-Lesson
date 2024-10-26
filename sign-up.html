@@ -3,39 +3,44 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Sign-up</title>
+    <title>Sign Up</title>
     <script src="https://cdn.tailwindcss.com"></script>
-    <link rel="stylesheet" href="css/icomoon-social.css">
-    <link href='http://fonts.googleapis.com/css?family=Open+Sans:400,700,600,800' rel='stylesheet' type='text/css'>
-    
 </head>
-<body class="bg-gray-200 flex items-center justify-center h-screen shadow-2xl">
-    <div class="text-center">
-        <h1 class="text-3xl font-extrabold mb-8">11th Lesson</h1>
-        <div class="bg-white p-10 rounded-lg shadow-lg w-96 mx-auto">
-            <h2 class="text-xl font-semibold mb-4 border-b pb-2">Sign Up</h2>
-            <form action="#" method="POST" class="flex flex-col">
-                <label for="username" class="text-left">Username:</label>
-                <input type="text" id="username" name="username" required
-                    class="border rounded-md p-2 mt-1 mb-3 w-full">
-
-                <label for="email" class="text-left">Email:</label>
-                <input type="email" id="email" name="email" required
-                    class="border rounded-md p-2 mt-1 mb-3 w-full">
-
-                <label for="password" class="text-left">Password:</label>
-                <input type="password" id="password" name="password" required
-                    class="border rounded-md p-2 mt-1 mb-3 w-full">
-
-                <button type="submit"
-                    class="bg-gray-800 text-white font-bold py-2 px-4 rounded-md mt-4 w-full hover:bg-gray-900">
-                    Sign Up
+<body class="bg-gray-100 flex items-center justify-center min-h-screen">
+    <div class="w-full max-w-md bg-white p-8 rounded-lg shadow-md">
+        <h2 class="text-2xl font-bold mb-6 text-gray-800 text-center">Create an Account</h2>
+        <form action="" method="POST" class="space-y-4">
+            <div>
+                <label for="name" class="block text-sm font-medium text-gray-700">Username</label>
+                <input type="text" id="name" name="name" placeholder="Ridita Akter Hossain Pasha" 
+                    class="mt-1 block w-full px-4 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring-blue-500 focus:border-blue-500">
+            </div>
+            <div>
+                <label for="email" class="block text-sm font-medium text-gray-700">Email</label>
+                <input type="email" id="email" name="email" placeholder="abcd123@gmail.com" 
+                    class="mt-1 block w-full px-4 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring-blue-500 focus:border-blue-500">
+            </div>
+            <div>
+                <label for="password" class="block text-sm font-medium text-gray-700">Password</label>
+                <input type="password" id="password" name="password" placeholder="" 
+                    class="mt-1 block w-full px-4 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring-blue-500 focus:border-blue-500">
+            </div>
+            <div>
+                <label for="confirm-password" class="block text-sm font-medium text-gray-700">Confirm Password</label>
+                <input type="password" id="confirm-password" name="confirm-password" placeholder="" 
+                    class="mt-1 block w-full px-4 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring-blue-500 focus:border-blue-500">
+            </div>
+            <div class="mt-6">
+                    <button type="submit" 
+                    class="w-full bg-blue-600 text-white py-2 rounded-md hover:bg-blue-700">
+                    <a href="index.html">Sign up</a>
                 </button>
-            </form>
-            <p class="mt-4 text-sm">Already have an account? <a href="#" class="text-blue-500 hover:underline">Log in</a></p>
-        </div>
+            </div>
+            <p class="text-sm text-center text-gray-600 mt-4">
+                Already have an account? 
+                <a href="login.html" class="text-blue-600 hover:underline">Log in</a>
+            </p>
+        </form>
     </div>
 </body>
-<input type="text">
-<label for=""></label>
 </html>
