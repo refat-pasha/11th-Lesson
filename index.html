@@ -6,7 +6,38 @@
     <title>Document</title>
     <script src="https://cdn.tailwindcss.com"></script>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css" integrity="sha512-Kc323vGBEqzTmouAECnVceyQqyqdsSiqLQISBL29aUW4U/M7pSPA/gEUZQqv1cwx4OnYxTxve5UMg5GT6L4JJg==" crossorigin="anonymous" referrerpolicy="no-referrer" />
-
+    
+    <script>
+        // Simulate an authentication check
+        function isAuthenticated() {
+            // Example: Check if "user" is stored in localStorage
+            return localStorage.getItem("user") !== null;
+        }
+        // Redirect to login or signup page if not authenticated
+        function checkAuth(event, redirectUrl) {
+            if (!isAuthenticated()) {
+                event.preventDefault();
+                // Save the target page URL in localStorage
+                localStorage.setItem("targetPage", redirectUrl);
+                alert("You need to log in or sign up first!");
+                window.location.href = "login.html"; // Redirect to the sign-up/login page
+            } else {
+                window.location.href = redirectUrl; // Continue to the requested page
+            }
+        }
+    </script>
+    <style>
+        /* Custom CSS for animation */
+        .clock-animation {
+            transform: scale(0);
+            animation: grow 5s forwards;
+        }
+        @keyframes grow {
+            to {
+                transform: scale(1);
+            }
+        }
+    </style>
     
 </head>
 <body>
@@ -20,10 +51,10 @@
                 </div>
                 <div>
                     <ul class="flex gap-11 font-medium mt-10 mr-20 items-center">
-                        <li><a href="deshboard.html">Dashboard</a></li>
-                        <li><a href="quiz.html">Quiz</a></li>
-                        <li><a href="publication.html">Publication</a></li>
-                        <li><a href="">Help</a></li>
+                        <li><a href="deshboard.html" onclick="checkAuth(event, 'dashboard.html')">Dashboard</a></li>
+                        <li><a href="quiz.html" onclick="checkAuth(event, 'quiz.html')">Quiz</a></li>
+                        <li><a href="publication.html"  onclick="checkAuth(event, 'publication.html')">Publication</a></li>
+                        <li><a href="help.html">Help</a></li>
                         <li class="bg-black text-white px-4 py-2 rounded-full hover:bg-green-700"><a href="sign-up.html">Sign Up</a></li>
                     </ul>
                 </div>
@@ -39,7 +70,7 @@
                         <button class="bg-green-600 text-white py-3 px-8 rounded-full text-lg font-semibold hover:bg-green-700 ">Log In</button>
                     </a>
                 </div>
-                <div class="mr-20 mt-10">
+                <div class="mr-20 mt-10 clock-animation">
                     <img src="images/Screenshot_2024-10-17_at_11.25.37_PM-removebg-preview.png" alt="">
                 </div>
             </div>
@@ -153,7 +184,7 @@
 
         <div class="text-white text-center mt-10">
             <hr class="border-gray-600 mb-4 border-dotted mx-10">
-            <div class=" bg-green-500 my-5 font-bold">
+            <div class=" bg-green-500 py-3 font-bold">
                 <p class="">&copy; 11th Lesson. All rights reserved.</p>
             </div>
         </div>
@@ -172,7 +203,3 @@
 
 </body>
 </html>
-
-<div class="#84cc16">
-    <H1>Nahin</H1>
-    </div>
