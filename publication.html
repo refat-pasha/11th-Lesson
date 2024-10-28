@@ -36,7 +36,7 @@
 
     <main class="max-w-2xl mx-auto my-12 p-8 bg-white shadow-lg rounded-lg">
         <h2 class="text-center text-2xl font-semibold mb-6">Share Your Knowledge</h2>
-        <form action="submit-content.html" method="POST" enctype="multipart/form-data">
+        <form action="submit.html" method="POST" enctype="multipart/form-data">
             <label for="title" class="block text-lg font-semibold mb-2">Title of Content:</label>
             <input type="text" id="title" name="title" placeholder="Enter the title of your content" required
                 class="w-full p-3 border border-gray-300 rounded mb-4">
@@ -56,10 +56,13 @@
             <input type="file" id="file-upload" name="file-upload" accept=".mp4,.pdf,.docx,.epub" required
                 class="w-full p-3 border border-gray-300 rounded mb-4">
 
-            <button type="submit"
-                class="w-full py-3 bg-green-500 text-white rounded hover:bg-gray-600 transition duration-300">Publish
-            </button>
+            
         </form>
+        <a href="publication-submit.html">
+            <button type="submit"
+            class="w-full py-3 bg-green-500 text-white rounded hover:bg-gray-600 transition duration-300">Publish
+        </button>
+        </a>
     </main>
 
     <footer class="bg-green-500 text-white py-4 text-center">

@@ -3,107 +3,57 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
-    <script src="https://cdn.tailwindcss.com"></script>
+    <title>Contact Page</title>
+    <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css" integrity="sha512-Kc323vGBEqzTmouAECnVceyQqyqdsSiqLQISBL29aUW4U/M7pSPA/gEUZQqv1cwx4OnYxTxve5UMg5GT6L4JJg==" crossorigin="anonymous" referrerpolicy="no-referrer" />
-    
-    <script>
-        function isAuthenticated() {
-            return localStorage.getItem("user") !== null;
-        }
-
-        function checkAuth(event, redirectUrl) {
-            if (!isAuthenticated()) {
-                event.preventDefault();
-                localStorage.setItem("targetPage", redirectUrl);
-                alert("You need to log in or sign up first!");
-                window.location.href = "login.html";
-            } else {
-                window.location.href = redirectUrl;
-            }
-        }
-    </script>
-
-    <style>
-        /* Animation for clock image */
-        .clock-animation {
-            transform: scale(0); /* Start from scale 0 */
-            animation: scale-up 1s forwards, rotate-clock 5s linear infinite; /* Combine scaling and rotating */
-        }
-
-        @keyframes scale-up {
-            100% {
-                transform: scale(1); /* Scale to original size */
-            }
-        }
-
-        @keyframes rotate-clock {
-            from {
-                transform: rotate(360deg); /* Start rotation from 0 degrees */
-            }
-            to {
-                transform: rotate(360deg); /* Rotate full circle */
-            }
-        }
-
-        /* Optional styling for rotating border */
-        .rotating-border {
-            border: 4px solid transparent;      
-            animation: rotate-border 5s linear infinite;
-        }
-
-        @keyframes rotate-border {
-            0% { transform: rotate(0deg); }
-            100% { transform: rotate(360deg); }
-        }
-    </style>
 </head>
-<body>
-    <header class="bg-green-100">
-        <!-- Navbar -->
-        <nav class="flex justify-between bg-green-500">
-            <div class="w-20 my-5 ml-40">
-                <img src="images/logo.png" alt="Logo">
-            </div>     
-            <ul class="flex gap-11 font-medium mt-10 mr-20 items-center">
-                <li><a href="dashboard.html" onclick="checkAuth(event, 'dashboard.html')">Dashboard</a></li>
-                <li><a href="quiz.html" onclick="checkAuth(event, 'quiz.html')">Quiz</a></li>
-                <li><a href="publication.html" onclick="checkAuth(event, 'publication.html')">Publication</a></li>
-                <li><a href="help.html">Help</a></li>
-                <li class="bg-black text-white px-4 py-2 rounded-full hover:bg-green-700"><a href="sign-up.html">Sign Up</a></li>
-            </ul>
-        </nav>
-
-        <!-- Main Section -->
-        <div class="flex justify-between px-36 py-12 mt-10">
-            <div class="max-w-lg mb-10">
-                <p class="text-red-600 text-xl font-semibold mb-6">Are you ready to</p>
-                <h1 class="font-extrabold text-4xl mb-10">
-                    <span class="auto-type"></span>
-                </h1>
-                <p class="mb-6">It will significantly enhance your readiness for exams by providing accessible, structured, and targeted study resources.</p>
-                <a href="login.html">
-                    <button class="bg-green-600 text-white py-3 px-8 rounded-full text-lg font-semibold hover:bg-green-700">Log In</button>
-                </a>
+<div class="bg-gray-900 text-white">
+    <div class="container mx-auto py-16 px-4 flex flex-col lg:flex-row justify-between items-center lg:items-start">
+        <!-- Left Section: Contact Information -->
+        <div class="p-8">
+            <div class="mt-10">
+                <h3 class="text-4xl font-bold text-yellow-500 mb-4">Contacts</h3>
+                    <p class="contact-us-details">
+                    <b>Address:</b> Sir Nafiz State, Olympus Mons, Mars<br />
+                    <b>Phone:</b> +8801317147896<br />
+                    <b>Email:</b> <a href="mailto:getintoutch@yourcompanydomain.com"><u class="text-yellow-400">nafiz@gmail.com</u></a>
+                    </p>
             </div>
-            <!-- Clock Image with Rotating Border -->
-            <div class="mr-20 mt-10 rotating-border flex items-center justify-center p-5">
-                <img src="images/Screenshot_2024-10-17_at_11.25.37_PM-removebg-preview.png" alt="Clock Image" class="clock-animation h-32 w-32">
+            <div class="mt-20">
+                <h3 class="text-4xl font-bold mb-4 text-yellow-400">Follow Us</h3>
+                <div class="flex space-x-4 mt-5 gap-12">
+                    <a href="#" class="text-4xl"><i class="fab fa-facebook"></i></a>
+                    <a href="#" class="text-4xl"><i class="fab fa-twitter"></i></a>
+                </div>
             </div>
         </div>
-    </header>
-    
-    <!-- Rest of the HTML content (Feature, Video Resource, Testimonial, Footer) -->
 
-    <!-- Typed.js script for text animation -->
-    <script src="https://unpkg.com/typed.js@2.1.0/dist/typed.umd.js"></script>
-    <script>
-        var typed = new Typed(".auto-type", {
-            strings: ["Exam Tomorrow?", "Incomplete Syllabus?", "Need fast tutorials?"],
-            typeSpeed: 50,
-            backSpeed: 50,
-            loop: true
-        });
-    </script>
-</body>
+        <!-- Right Section: Get in Touch Form -->
+        <div class="w-full lg:w-1/2  p-8 rounded-lg shadow-lg text-gray-800">
+            <h2 class="text-4xl text-yellow-500 text-center font-bold mb-6">Get in Touch</h2>
+            <form action="#" method="POST">
+                <div class="mb-4">
+                    <input type="text" name="fullName" placeholder="Full Name" 
+                           class="w-full p-3 border border-teal-500 rounded focus:outline-none focus:border-teal-700"/>
+                </div>
+                <div class="mb-4">
+                    <input type="email" name="email" placeholder="Email" 
+                           class="w-full p-3 border border-teal-500 rounded focus:outline-none focus:border-teal-700"/>
+                </div>
+                <div class="mb-4">
+                    <input type="tel" name="phone" placeholder="Phone Number" 
+                           class="w-full p-3 border border-teal-500 rounded focus:outline-none focus:border-teal-700"/>
+                </div>
+                <div class="mb-4">
+                    <textarea name="message" placeholder="Message" rows="4"
+                              class="w-full p-3 border border-teal-500 rounded focus:outline-none focus:border-teal-700"></textarea>
+                </div>
+                <button type="submit" 
+                        class="w-full bg-green-500 text-white p-3 rounded hover:bg-green-700">
+                    Send
+                </button>
+            </form>
+        </div>
+    </div>
+</div>
 </html>
